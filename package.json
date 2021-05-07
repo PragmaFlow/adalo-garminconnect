@@ -1,0 +1,9 @@
+{
+  "name": "garmin-connect",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "jshint": "^2.12.0"
+  }
+}

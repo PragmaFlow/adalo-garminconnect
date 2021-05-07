@@ -1,0 +1,38 @@
+# Welcome to serverless. Read the docs
+# https://serverless.com/framework/docs/
+
+# Serverless.yml is the configuration the CLI
+# uses to deploy your code to your provider of choice
+
+# The `service` block is the name of the service
+service: garmin-api
+
+frameworkVersion: '2'
+
+# The `provider` block defines where your service will be deployed
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  getRequestToken:
+    handler: handler.getRequestToken
+    events:
+      - http:
+          path: get-request-token
+          method: get
+          cors: true
+  garminCallback:
+    handler: handler.garminCallback
+    events:
+      - http:
+          path: garmin-callback
+          method: get
+          cors: true
+  garminAccessToken:
+    handler: handler.getAccessToken
+    events:
+      - http:
+          path: garmin-access-token
+          method: get
+          cors: true

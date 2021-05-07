@@ -1,0 +1,33 @@
+{
+  "name": "garmin-connect",
+  "description": "Garmin oAuth Login",
+  "version": "1.0.28",
+  "main": "index.js",
+  "license": "ISC",
+  "author": "Steven McKeown",
+  "scripts": {
+    "start": "adalo dev",
+    "login": "adalo login",
+    "publish": "adalo publish"
+  },
+  "adalo": {
+    "logo": "./logo.png",
+    "displayName": "Garmin Connect",
+    "components": [
+      {
+        "name": "GarminOAuth",
+        "manifest": "./src/components/GarminOAuth/manifest.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@adalo/cli": "^0.0.41",
+    "react": "^16.9.0",
+    "react-art": "^16.6.0",
+    "react-dom": "^16.9.0",
+    "react-native-web": "^0.9.5"
+  },
+  "dependencies": {
+    "oauth-1.0a": "^2.2.6"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "displayName": "GarminOAuth",
+  "defaultWidth": 160,
+  "defaultHeight": 24,
+  "components": "./index.js",
+  "icon": "./example-thumbnail.png",
+  "props": [
+    {
+      "name": "request_url",
+      "displayName": "Request URL",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "name": "authorize_url",
+      "displayName": "Authorize URL",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "name": "access_url",
+      "displayName": "Access URL",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "name": "token",
+      "displayName": "Token",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "name": "token_secret",
+      "displayName": "Token Secret",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "name": "verifier",
+      "displayName": "Verifier",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "name": "onSuccessRequest",
+      "displayName": "Request granted",
+      "type": "action",
+      "role": "formChangeHandler",
+      "arguments": [
+        {
+          "type": "text",
+          "displayName": "OAuth Token"
+        },
+        {
+          "type": "text",
+          "displayName": "OAuth Secret"
+        }
+      ]
+    },
+    {
+      "name": "onSuccessAccess",
+      "displayName": "Access granted",
+      "type": "action",
+      "role": "formChangeHandler",
+      "arguments": [
+        {
+          "type": "text",
+          "displayName": "OAuth Token"
+        },
+        {
+          "type": "text",
+          "displayName": "OAuth Secret"
+        }
+      ]
+    },
+    {
+      "name": "onError",
+      "displayName": "onError",
+      "role": "formChangeHandler",
+      "type": "action"
+    }
+  ]
+}
